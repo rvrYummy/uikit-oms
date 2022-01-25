@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+@layer components {
+  .base-input {
+    @apply form-input block w-full mt-2 focus:border-black focus:ring-black focus:ring-0 rounded-lg
+    placeholder:font-interLight border-[#9E9E9E] font-interLight placeholder:text-sm text-sm;
+  }
+
+  .button-primary {
+    @apply bg-primary text-white font-interSemiBold text-sm hover:bg-gray-500 w-full h-12
+    active:bg-gray-400;
+  }
+
+  .button-white {
+    @apply bg-white text-primary hover:text-gray-500 hover:bg-transparent font-interSemiBold text-sm w-full h-12;
+  }
+
+  .button-outline {
+    @apply bg-white text-primary hover:text-gray-500 hover:bg-transparent font-interSemiBold text-sm w-full h-12
+    border-solid border-2 border-green;
+  }
+
+  .text-x-x-large {
+    @apply text-lg font-interLight;
+  }
+
+  .text-x-large {
+    @apply text-[18px] font-interLight;
+  }
+
+  .text-large {
+    @apply text-base font-interLight;
+  }
+
+  .text-regular {
+    @apply text-sm font-interLight;
+  }
+
+  .text-small {
+    @apply text-[13px] font-interLight;
+  }
+
+  .text-super-small {
+    @apply text-xs font-interLight;
+  }
+
+  .text-micro {
+    @apply text-[10px] font-interLight;
+  }
+
+  .alert-success {
+    @apply bg-positive-dark h-12 px-2 py-3 rounded-lg flex items-center;
+  }
+
+  .alert-error {
+    @apply bg-danger-default h-12 px-2 py-3 rounded-lg flex items-center;
+  }
+
+  .title1 {
+    @apply text-4xl font-interLight;
+  }
+
+  .title2 {
+    @apply text-2xl font-interLight;
+  }
+
+  .title3 {
+    @apply text-xl font-interLight;
+  }
+
+  .subtitle {
+    @apply text-[18px] font-interLight;
+  }
+}
