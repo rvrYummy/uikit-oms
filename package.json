@@ -1,7 +1,7 @@
 {
-  "name": "uikit-oms",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@rvryummy/uikit-oms-npm",
+  "version": "1.0.1",
+  "private": false,
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
     "@testing-library/jest-dom": "^5.16.1",
@@ -23,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "publish": "cross-env BABEL_ENV=production babel src -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-links": "^6.4.14",
@@ -64,9 +66,21 @@
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.14",
+    "auto": "^10.32.6",
     "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.16",
     "webpack": "^5.67.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
   }
 }
